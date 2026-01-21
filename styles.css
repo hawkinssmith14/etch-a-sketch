@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.btn-grid-input {
+    margin: 12px;
+}
