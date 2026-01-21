@@ -2,6 +2,15 @@ const container = document.querySelector(".container");
 const btn = document.querySelector(".btn-grid-input");
 const containerSize = 400; // px
 
+// randomises the colour of the squares
+function randomRGB() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
 container.style.width = `${containerSize}px`;
 
 function createGrid(squaresPerSide) {
@@ -15,7 +24,7 @@ function createGrid(squaresPerSide) {
         box.style.width = `${boxSize}px`;
         box.style.height = `${boxSize}px`;
         box.addEventListener("mouseenter", () => {
-            box.style.backgroundColor = "green";
+            box.style.backgroundColor = randomRGB();
         });
         container.appendChild(box);
     }
